@@ -1,3 +1,7 @@
+:root {
+    --theme-color: #d97706;
+}
+
 * {
     border: 0;
     margin: 0;
@@ -86,7 +90,7 @@ input#search-bar {
 }
 
 .btn-container > .btn-controls {
-    background-color: skyblue;
+    background-color: var(--theme-color);
     border-radius: 15px;
     color: white;
     width: 75px;
@@ -97,23 +101,71 @@ input#search-bar {
 
 .sidebar {
     grid-row: 1 / -1;
-    background-color: skyblue;
+    background-color: var(--theme-color);
     display: grid;
-    grid-template-rows: 50px 200px 100px;
+    grid-template-rows: auto auto auto 1fr;
+    padding: 25px;
+    gap: 50px;
+    color: white;
 }
 
-.sidebar > * {
-    padding: 15px;
+.sidebar > .logo-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.logo-container > svg {
+    fill: white;
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+}
+
+.logo-container > h3 {
+    font-size: 28px;
 }
 
 .sidebar > .nav {
     display: grid;
     grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.sidebar > .nav-settings {
+.sidebar h4 {
+    font-size: large;
+    cursor: pointer;
+}
+
+.sidebar h4:hover {
+    text-decoration: underline 2px white;
+    text-underline-offset: 4px;
+}
+
+.sidebar i {
+    cursor: pointer;
+    font-size: 18px;
+    align-self: center;
+    justify-self: center;
+}
+
+.sidebar i:hover + h4 {
+    text-decoration: underline 2px white;
+    text-underline-offset: 4px;
+}
+
+.sidebar > .nav-access {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: auto 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .content {
@@ -139,7 +191,7 @@ input#search-bar {
 
 .projects {
     background-color: white;
-    height: 200px;
+    min-height: 200px;
     border-radius: 15px;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -150,7 +202,7 @@ input#search-bar {
     grid-area: 1 / 1 / 3 / 2;
     width: 10px;
     height: 100%;
-    background-color: orange;
+    background: linear-gradient(to bottom, #6d28d9, #be185d);
     border-radius: 15px 0px 0px 15px;
 }
 
