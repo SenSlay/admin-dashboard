@@ -32,6 +32,8 @@ input#search-bar {
     grid-template-rows: auto auto;
     padding: 10px 50px;
     gap: 15px; 
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 .search-container {
@@ -195,7 +197,6 @@ input#search-bar {
 .main-container {
     display: grid;
     grid-template-rows: auto 1fr;
-    
 }
 
 .projects-container {
@@ -211,6 +212,7 @@ input#search-bar {
     display: grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: 3fr 1fr;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .projects > .line-highlight {
